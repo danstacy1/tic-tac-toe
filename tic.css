@@ -25,6 +25,7 @@ h1 {
   
 div > div {
     padding: 10px;
+    color: red;
     background-color: grey;
   }
 
