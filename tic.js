@@ -4,16 +4,9 @@ let turn = 0
 let boxFilled = [true, true, true, true, true, true, true, true, true] 
 const gameFlow = ["playerx", "playero","playerx", "playerx", "playero", "playerx", "playero", "playerx", "playero"]
  
-// game flow alternating object
-// let turnIndicator = playerX, playerO
-
-//const unclaimedColor= "rgb(173,13,217)"
-
-//const gameOverColor = "rgb(255,255,255)"
-
-//const restart = document.querySelector("#restart")
 
 // Call all the cells
+let grid = document.getElementsByClassName("grid")
 let b1 = document.getElementById("b1")
 let b2 = document.getElementById("b2")
 let b3 = document.getElementById("b3")
@@ -38,6 +31,8 @@ b1.addEventListener('click', function (event) {
         }
         turn = turn +1
         boxFilled [0] = false
+        checkWin ()
+        endGame ()
     }
 })
 
@@ -52,6 +47,8 @@ b2.addEventListener('click', function (event) {
         }
         turn = turn +1
         boxFilled [1] = false
+        checkWin ()
+        endGame ()
     }
 })
 
@@ -66,6 +63,8 @@ b3.addEventListener('click', function (event) {
         }
         turn = turn +1
         boxFilled [2] = false
+        checkWin ()
+        endGame ()
     }
 })
 
@@ -80,6 +79,8 @@ b4.addEventListener('click', function (event) {
         }
         turn = turn +1
         boxFilled [3] = false
+        checkWin ()
+        endGame ()
     }
 })
 b5.addEventListener('click', function (event) {
@@ -93,6 +94,8 @@ b5.addEventListener('click', function (event) {
         }
         turn = turn +1
         boxFilled [4] = false
+        checkWin ()
+        endGame ()
     }
 })
 b6.addEventListener('click', function (event) {
@@ -106,6 +109,8 @@ b6.addEventListener('click', function (event) {
         }
         turn = turn +1
         boxFilled [5] = false
+        checkWin ()
+        endGame ()
     }
 })
 b7.addEventListener('click', function (event) {
@@ -119,6 +124,8 @@ b7.addEventListener('click', function (event) {
         }
         turn = turn +1
         boxFilled [6] = false
+        checkWin ()
+        endGame ()
     }
 })
 b8.addEventListener('click', function (event) {
@@ -132,6 +139,8 @@ b8.addEventListener('click', function (event) {
         }
         turn = turn +1
         boxFilled [7] = false
+        checkWin ()
+        endGame ()
     }
 })
 b9.addEventListener('click', function (event) {
@@ -145,6 +154,8 @@ b9.addEventListener('click', function (event) {
         }
         turn = turn +1
         boxFilled [8] = false
+        checkWin ()
+        endGame ()
     }
 })
 
@@ -160,14 +171,52 @@ function checkWin (){
         b3.innerText != "" && b3.innerText === b5.innerText && b3.innerText === b7.innerText
     ){
         document.getElementById("winner").innerText = "Player ${} has won!"
+        
         console.log("Winner, Winner, Chicken Dinner!")
 
     }
         if (turn === 9) {
             document.getElementById("winner").innerText = "It's a Tie. Click Restart Game to play again!"
-        }
+        } if (turn === 1) {
+            document.getElementById("playerturn").innerText = "Player 2 Turn"
+        } if (turn === 2) {
+            document.getElementById("playerturn").innerText = "Player 1 Turn"
+        } if (turn === 3) {
+            document.getElementById("playerturn").innerText = "Player 2 Turn"
+        } if (turn === 4) {
+            document.getElementById("playerturn").innerText = "Player 1 Turn"
+        } if (turn === 5) {
+            document.getElementById("playerturn").innerText = "Player 2 Turn"
+        } if (turn === 6) {
+            document.getElementById("playerturn").innerText = "Player 1 Turn"
+        } if (turn === 7) {
+            document.getElementById("playerturn").innerText = "Player 2 Turn"
+        } if (turn === 8) {
+            document.getElementById("playerturn").innerText = "Player 1 Turn"
+        } 
 }
 
+function endGame () {
+    if (b1.innerText != "" && b1.innerText === b2.innerText && b1.innerText === b3.innerText ||
+        b4.innerText != "" && b4.innerText === b5.innerText && b4.innerText === b6.innerText ||
+        b7.innerText != "" && b7.innerText === b8.innerText && b7.innerText === b9.innerText ||
+        b1.innerText != "" && b1.innerText === b4.innerText && b1.innerText === b7.innerText ||
+        b2.innerText != "" && b2.innerText === b5.innerText && b2.innerText === b8.innerText ||
+        b3.innerText != "" && b3.innerText === b6.innerText && b3.innerText === b9.innerText ||
+        b1.innerText != "" && b1.innerText === b5.innerText && b1.innerText === b9.innerText ||
+        b3.innerText != "" && b3.innerText === b5.innerText && b3.innerText === b7.innerText
+    ) { 
+        b1.removeEventListener('click', function, true ())
+        b2.removeEventListener('click', endGame())
+        b3.removeEventListener('click', endGame())
+        b4.removeEventListener('click', endGame())
+        b5.removeEventListener('click', endGame())
+        b6.removeEventListener('click', endGame())
+        b7.removeEventListener('click', endGame())
+        b8.removeEventListener('click', endGame())
+        b9.removeEventListener('click', endGame())
+    }
+}
 
 // Restart Button
 restart.addEventListener('click', function (event) {
