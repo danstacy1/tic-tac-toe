@@ -7,6 +7,11 @@ h1 {
     text-align: center;
 }
 
+h2 {
+  text-align: center;
+  color: black
+}
+
 .grid {
     display: grid;
     gap: 5px;
@@ -19,17 +24,16 @@ h1 {
     /* max-width: 500px;
     max-height: 1500px; */
     text-align: center;
-    font-size: 24;
     background-color: black;
   }
   
 div > div {
     padding: 10px;
-    color: red;
+    font-size: 48;
     background-color: grey;
   }
 
-.Restart {
+.restart {
     text-align: center;
     margin: 60px;
 }
