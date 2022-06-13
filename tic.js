@@ -22,7 +22,7 @@ let b9 = document.getElementById("b9")
 console.log(gameWinner)
 // set the event listeners
 b1.addEventListener('click', function (event) {
-    if (winner.innerText != "Player 1 has won!" && (gameWinner != true) || "Player 2 has won!" && (gameWinner != true)) {
+    if (gameWinner == false) {
         console.log(gameWinner)
         if (boxFilled[0] === true) {
             if (playerTurn === true) {
@@ -41,7 +41,7 @@ b1.addEventListener('click', function (event) {
 )
 
 b2.addEventListener('click', function (event) {
-    if (winner.innerText != "Player 1 has won!" && (gameWinner != true) || "Player 2 has won!" && (gameWinner != true)) {
+    if (gameWinner == false) {
         if (boxFilled[1] === true) {
             if (playerTurn === true) {
                 b2.innerText = ("X")
@@ -59,7 +59,7 @@ b2.addEventListener('click', function (event) {
 )
 
 b3.addEventListener('click', function (event) {
-    if (winner.innerText != "Player 1 has won!" && (gameWinner != true) || "Player 2 has won!" && (gameWinner != true)) {
+    if (gameWinner == false) {
         if (boxFilled[2] === true) {
             if (playerTurn === true) {
                 b3.innerText = ("X")
@@ -77,7 +77,7 @@ b3.addEventListener('click', function (event) {
 )
 
 b4.addEventListener('click', function (event) {
-    if (winner.innerText != "Player 1 has won!" && (gameWinner != true) || "Player 2 has won!" && (gameWinner != true)) {
+    if (gameWinner == false) {
         if (boxFilled[3] === true) {
             if (playerTurn === true) {
                 b4.innerText = ("X")
@@ -95,7 +95,7 @@ b4.addEventListener('click', function (event) {
 )
 
 b5.addEventListener('click', function (event) {
-    if (winner.innerText != "Player 1 has won!" && (gameWinner != true) || "Player 2 has won!" && (gameWinner != true)) {
+    if (gameWinner == false) {
         if (boxFilled[4] === true) {
             if (playerTurn === true) {
                 b5.innerText = ("X")
@@ -113,7 +113,7 @@ b5.addEventListener('click', function (event) {
 )
 
 b6.addEventListener('click', function (event) {
-    if (winner.innerText != "Player 1 has won!" && (gameWinner != true) || "Player 2 has won!" && (gameWinner != true)) {
+    if (gameWinner == false) {
         if (boxFilled[5] === true) {
             if (playerTurn === true) {
                 b6.innerText = ("X")
@@ -131,7 +131,7 @@ b6.addEventListener('click', function (event) {
 )
 
 b7.addEventListener('click', function (event) {
-    if (winner.innerText != "Player 1 has won!" && (gameWinner != true) || "Player 2 has won!" && (gameWinner != true)) {
+    if (gameWinner == false) {
         if (boxFilled[6] === true) {
             if (playerTurn === true) {
                 b7.innerText = ("X")
@@ -149,7 +149,7 @@ b7.addEventListener('click', function (event) {
 )
 
 b8.addEventListener('click', function (event) {
-    if (winner.innerText != "Player 1 has won!" && (gameWinner != true) || "Player 2 has won!" && (gameWinner != true)) {
+    if (gameWinner == false) {
         if (boxFilled[7] === true) {
             if (playerTurn === true) {
                 b8.innerText = ("X")
@@ -167,7 +167,7 @@ b8.addEventListener('click', function (event) {
 )
 
 b9.addEventListener('click', function (event) {
-    if (winner.innerText != "Player 1 has won!" && (gameWinner != true) || "Player 2 has won!" && (gameWinner != true)) {
+    if (gameWinner == false) {
         if (boxFilled[8] === true) {
             if (playerTurn === true) {
                 b9.innerText = ("X")
