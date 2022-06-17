@@ -21,8 +21,6 @@ h2 {
     margin-right: auto;
     width: 400px;
     height: 400px;
-    /* max-width: 500px;
-    max-height: 1500px; */
     text-align: center;
     background-color: black;
   }
@@ -33,7 +31,12 @@ div > div {
     background-color: grey;
   }
 
-.restart {
+.restart:hover {
     text-align: center;
     margin: 60px;
+}
+
+.restart {
+  text-align: center;
+  margin: 60px;
 }
